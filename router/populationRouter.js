@@ -1,8 +1,8 @@
-const express = require('express');
-const { createPopulation } = require('../controller/populationController');
+const { Router } = require('express');
+const { createPopulation, getPopulation } = require('../controller/populationController');
 
-const router = express.Router();
+const router = Router();
 
-router.route('/').post(createPopulation);
+router.route('/').post(createPopulation).get(getPopulation);
 
 module.exports = router;

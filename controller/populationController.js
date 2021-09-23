@@ -5,3 +5,9 @@ exports.createPopulation = async(req, res) => {
 
 	res.json(result);
 };
+
+exports.getPopulation = async(req, res) => {
+	const result = await population.findAll();
+
+	res.json(result);
+};
